@@ -1,125 +1,19 @@
-Step: build-step-credential-initializer-dqgkc:
+Step: build-step-credential-initializer:
 
-{"level":"warn","ts":1553515994.6376994,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1553515994.6416671,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
-Step: build-step-git-source-warrenbailey-flask-test-master-hmvdb:
+{"level":"warn","ts":1553514366.6369975,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/test\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1553514366.6385007,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-0:
 
-{"level":"warn","ts":1553515996.9661038,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1553515998.1036298,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/warrenbailey/flask-test\" @ \"master\" in path \"/workspace/source\""}
-Step: build-step-place-tools:
+{"level":"warn","ts":1553514369.2473881,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/test\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1553514370.6845622,"logger":"fallback-logger","caller":"git-init/main.go:92","msg":"Successfully cloned \"https://github.com/warrenbailey/flask-test.git\" @ \"master\" in path \"/workspace\""}
+Step: build-step-jenkins:
 
-Step: build-step-build-python-unittest:
-
-
-----------------------------------------------------------------------
-Ran 0 tests in 0.000s
-
-OK
-Step: build-step-build-container-build:
-
-[36mINFO[0m[0000] Downloading base image python:onbuild        
-ERROR: logging before flag.Parse: E0325 12:13:40.963277       9 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
-ERROR: logging before flag.Parse: E0325 12:13:40.969177       9 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
-2019/03/25 12:13:41 No matching credentials were found, falling back on anonymous
-[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:43780a8431c53f4afd734ad795e03127c0c607337a60639c5903a51a03535c22: no such file or directory 
-[36mINFO[0m[0001] Downloading base image python:onbuild        
-2019/03/25 12:13:42 No matching credentials were found, falling back on anonymous
-[36mINFO[0m[0002] Executing 3 build triggers                   
-[36mINFO[0m[0002] Using files from context: [/workspace/source/requirements.txt] 
-[36mINFO[0m[0002] Checking for cached layer 10.19.249.230:5000/4588a2b3b8b742c1f5cc73ba8156758346f3757e5e98c7ce9346361d29e74611... 
-2019/03/25 12:13:43 No matching credentials were found, falling back on anonymous
-[36mINFO[0m[0002] No cached layer found for cmd RUN pip install --no-cache-dir -r requirements.txt 
-[36mINFO[0m[0002] Unpacking rootfs as cmd RUN pip install --no-cache-dir -r requirements.txt requires it. 
-[36mINFO[0m[0020] Taking snapshot of full filesystem...        
-[36mINFO[0m[0027] Using files from context: [/workspace/source/requirements.txt] 
-[36mINFO[0m[0027] COPY requirements.txt /usr/src/app/          
-[36mINFO[0m[0027] Taking snapshot of files...                  
-[36mINFO[0m[0027] RUN pip install --no-cache-dir -r requirements.txt 
-[36mINFO[0m[0027] cmd: /bin/sh                                 
-[36mINFO[0m[0027] args: [-c pip install --no-cache-dir -r requirements.txt] 
-Collecting Click==7.0 (from -r requirements.txt (line 1))
-  Downloading https://files.pythonhosted.org/packages/fa/37/45185cb5abbc30d7257104c434fe0b07e5a195a6847506c074527aa599ec/Click-7.0-py2.py3-none-any.whl (81kB)
-Collecting Flask==1.0.2 (from -r requirements.txt (line 2))
-  Downloading https://files.pythonhosted.org/packages/7f/e7/08578774ed4536d3242b14dacb4696386634607af824ea997202cd0edb4b/Flask-1.0.2-py2.py3-none-any.whl (91kB)
-Collecting itsdangerous==1.1.0 (from -r requirements.txt (line 3))
-  Downloading https://files.pythonhosted.org/packages/76/ae/44b03b253d6fade317f32c24d100b3b35c2239807046a4c953c7b89fa49e/itsdangerous-1.1.0-py2.py3-none-any.whl
-Collecting Jinja2==2.10 (from -r requirements.txt (line 4))
-  Downloading https://files.pythonhosted.org/packages/7f/ff/ae64bacdfc95f27a016a7bed8e8686763ba4d277a78ca76f32659220a731/Jinja2-2.10-py2.py3-none-any.whl (126kB)
-Collecting MarkupSafe==1.1.0 (from -r requirements.txt (line 5))
-  Downloading https://files.pythonhosted.org/packages/08/04/f2191b50fb7f0712f03f064b71d8b4605190f2178ba02e975a87f7b89a0d/MarkupSafe-1.1.0-cp36-cp36m-manylinux1_x86_64.whl
-Collecting Werkzeug==0.14.1 (from -r requirements.txt (line 6))
-  Downloading https://files.pythonhosted.org/packages/20/c4/12e3e56473e52375aa29c4764e70d1b8f3efa6682bef8d0aae04fe335243/Werkzeug-0.14.1-py2.py3-none-any.whl (322kB)
-Installing collected packages: Click, Werkzeug, itsdangerous, MarkupSafe, Jinja2, Flask
-Successfully installed Click-7.0 Flask-1.0.2 Jinja2-2.10 MarkupSafe-1.1.0 Werkzeug-0.14.1 itsdangerous-1.1.0
-You are using pip version 10.0.1, however version 19.0.3 is available.
-You should consider upgrading via the 'pip install --upgrade pip' command.
-[36mINFO[0m[0030] Taking snapshot of full filesystem...        
-[36mINFO[0m[0035] Pushing layer 10.19.249.230:5000/4588a2b3b8b742c1f5cc73ba8156758346f3757e5e98c7ce9346361d29e74611 to cache now 
-[36mINFO[0m[0035] Using files from context: [/workspace/source] 
-[36mINFO[0m[0036] COPY . /usr/src/app                          
-2019/03/25 12:14:16 pushed blob sha256:1ff5e7c422e72366fdfe7403c829a7a24f7150ce9324dc1b949f8c68e6574f7e
-[36mINFO[0m[0036] Taking snapshot of files...                  
-[36mINFO[0m[0036] ENV PORT 8080                                
-[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0036] EXPOSE 8080                                  
-[36mINFO[0m[0036] cmd: EXPOSE                                  
-[36mINFO[0m[0036] Adding exposed port: 8080/tcp                
-[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0036] ENTRYPOINT ["python"]                        
-[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0036] CMD ["app.py"]                               
-[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
-2019/03/25 12:14:17 pushed blob sha256:066c6243aef5a2951ce76b1654eb00b55e0042fbd931ae75ae3eddce7c541e78
-2019/03/25 12:14:17 10.19.249.230:5000/4588a2b3b8b742c1f5cc73ba8156758346f3757e5e98c7ce9346361d29e74611:latest: digest: sha256:9770f5f7100ffc15e9a5e40405781c89c065f517cc220715ffdc784b43d75c35 size: 428
-2019/03/25 12:14:17 pushed blob sha256:08f4bce0a8b54e75c1b946d5eaea92db439314ea001865dbfb71a4147a415caa
-2019/03/25 12:14:17 pushed blob sha256:18fd72658259098a89a098d6f59d4fd2ab18da758e7e10af8e4cf93429b9cd8e
-2019/03/25 12:14:17 pushed blob sha256:1724036c76057cf6793ea9a53f6ba9d0cf72d6e04a10ae864b4102b2fe15cb66
-2019/03/25 12:14:17 pushed blob sha256:2d21c767035c4593de8bf7ad9781aa83ba110871d1a50871192f4e3480e6f11d
-2019/03/25 12:14:18 pushed blob sha256:e2c0fb34dff3a1d32346b92e53fb88a14d1987b402a2348cb379c039687fabe2
-2019/03/25 12:14:18 pushed blob sha256:490280dbcfb772eb5731f059e38fcfacaeb75b4d005af7c249fd51926db2bd62
-2019/03/25 12:14:18 pushed blob sha256:e96bc319bce0351d1157092352bc5f85f8800c745388e60e86d06dec99285b45
-2019/03/25 12:14:18 pushed blob sha256:066c6243aef5a2951ce76b1654eb00b55e0042fbd931ae75ae3eddce7c541e78
-2019/03/25 12:14:19 pushed blob sha256:e10b68fb77e6e91453cd4c1b02e2d77aa23a857cd8eb250617129d074478e1a5
-2019/03/25 12:14:19 pushed blob sha256:ece825d3308bbf98f708d95475ccd880497a1e2979ff4ef2534d49049a18488f
-2019/03/25 12:14:19 pushed blob sha256:06854774e2f35e4763103a446112c67322913a6177bea69eb49663e0166e6d6d
-2019/03/25 12:14:20 pushed blob sha256:1c7fe136a31e13a1c879245672184ced3b9fc590989ba42a522a57b071a9c1aa
-2019/03/25 12:14:22 pushed blob sha256:f0db43b9b8da254cebc77bf871006df01219e195b9853616b9f708f124a00f3a
-2019/03/25 12:14:22 10.19.249.230:5000/warrenbailey/flask-test:0.0.0-SNAPSHOT-master-1: digest: sha256:04d80c0d5b20d55a2e576b223b38f94ea7b170039f9cdedc4361d03966f7ab7d size: 2224
-Step: build-step-postbuild-post-build:
-
-no CVE provider running in the current jx namespace so skip adding image to be analysed
-Step: build-step-promote-make-preview:
-
-sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-master-1/" Chart.yaml
-sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-master-1/" ../*/Chart.yaml
-sed -i -e "s|repository:.*|repository: 10.19.249.230:5000\/warrenbailey\/flask-test|" values.yaml
-sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-master-1/" values.yaml
-echo "  version: 0.0.0-SNAPSHOT-master-1" >> requirements.yaml
-jx step helm build
-No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Adding missing Helm repo: jenkins-x http://chartmuseum.jenkins-x.io
-Successfully added Helm repository jenkins-x.
-Adding missing Helm repo: releases http://jenkins-x-chartmuseum:8080
-Successfully added Helm repository releases.
-Step: build-step-promote-jx-preview:
-
-Creating a preview
-Unable to convert PR master to a number
-Created environment warrenbailey-flask-test-pr-master
-Namespace jx-warrenbailey-flask-test-pr-master created 
- expose:
-  Annotations:
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-delete-policy: hook-succeeded
-  config:
-    domain: 35.187.54.46.nip.io
-    exposer: Ingress
-    http: "true"
-preview:
-  image:
-    repository: 10.19.249.230:5000/warrenbailey/flask-test
-    tag: 0.0.0-SNAPSHOT-master-1
-Failed to update PipelineActivities warrenbailey-flask-test-master-1: the namespace of the object (jx-warrenbailey-flask-test-pr-master) does not match the namespace on the request (jx)
-Preview application is now available at: http://flask-test.jx-warrenbailey-flask-test-pr-master.35.187.54.46.nip.io
-
-Failed to comment on the Pull Request with owner warrenbailey repo flask-test: strconv.Atoi: parsing "master": invalid syntax
+Picked up _JAVA_OPTIONS: -Xmx400m
+No argument is allowed: python3
+ -f (--file) FILE        : Path to Jenkinsfile (or directory containing a
+                           Jenkinsfile) to run, default to ./Jenkinsfile.
+ -p (--plugins) FILE     : plugins required to run pipeline. Either a
+                           plugins.txt file or a /plugins installation
+                           directory. Defaults to plugins.txt.
+ -v (--version) VAL      : jenkins version to use. Defaults to latest LTS.
+ -w (--jenkins-war) FILE : path to jenkins.war or exploded jenkins war directory
