@@ -20,3 +20,9 @@ preview:
     repository:
     tag:
     pullPolicy: IfNotPresent
+
+hey:
+  load:
+    url: "http://flask-test"
+    numberOfRequests: 1000
+    concurrentRequests: 100
