@@ -1,7 +1,1 @@
 buildPack: python
-pipelines:
-  release:
-    pipeline:
-      environment:
-        - name: CHART_REPOSITORY
-          value: https://storage.googleapis.com/chartmuseum.jenkins-x.io
